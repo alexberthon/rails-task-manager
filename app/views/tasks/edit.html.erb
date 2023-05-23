@@ -1,0 +1,7 @@
+<h1>Edit task</h1>
+
+<%= render "form", task: @task %>
+
+<%= link_to task_path(@task), class: "text-decoration-none" do %>
+  <i class="fa-solid fa-clock-rotate-left"></i> Back to task
+<% end %>

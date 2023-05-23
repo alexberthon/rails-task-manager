@@ -1,0 +1,22 @@
+<div class="d-flex justify-content-between align-items-center">
+  <h1><%= @task.title %></h1>
+  <%= link_to edit_task_path(@task), class: "btn btn-light" do %>
+    <i class="fa-solid fa-pencil"></i> Edit this task
+  <% end %>
+</div>
+
+<div class="alert alert-secondary" role="alert">
+  <%= @task.details %>
+</div>
+
+<div class="mb-3">
+  <% if @task.completed %>
+    <i class="fa-solid fa-square-check"></i> This task is completed
+  <% else %>
+    <i class="fa-solid fa-square"></i> This task is not completed yet
+  <% end %>
+</div>
+
+<%= link_to tasks_path, class: "text-decoration-none" do %>
+  <i class="fa-solid fa-clock-rotate-left"></i> Back to tasks
+<% end %>
